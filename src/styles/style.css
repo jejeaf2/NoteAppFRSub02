@@ -1,0 +1,237 @@
+:root {
+  --font-color: white;
+  --background-color: #406882;
+}
+ 
+[data-theme='dark'] {
+  --font-color: hwb(0 84% 13%);
+  --background-color: #1A374D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in;
+}
+ 
+body {
+  font-family: sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+#root {
+  height: 50h;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+ 
+button {
+  background: transparent;
+  color: var(--font-color);
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+.note-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.note-app__header {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  border: 2px solid white;
+  box-shadow: 2px 0px 2px 0px white;
+  border-radius: 8px 8px 0px 0px;
+}
+
+h1 {
+  padding: 16px;
+}
+
+.note-app__header h1 {
+  font-weight: normal;
+  font-size: 32px;
+  flex: 1;
+  /* border-bottom: 2px solid black; */
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+.note-app__main {
+ border: 2px solid white;
+ border-radius: 0px 0px 8px 8px;
+ box-shadow: 0 4px 8px 0 #B1D0E0;
+ padding: 8px;
+
+}
+
+.navigation {
+  border-bottom: 0px solid black;
+
+}
+
+.navigation ul li {
+  display: inline-block;
+  padding: 16px;
+}
+
+.navigation ul li a {
+  font-size: 28px;
+  color: black;
+}
+
+.note-list .note-item {
+  display: flex;
+  padding: 5rem;
+  background-color: black;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  height: auto;
+  /* margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 3rem; */
+  /* gap: 2rem; */
+  padding-top: 8px;
+}
+
+.note-item__body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+}
+
+.note-item__title {
+  padding: 4px 0;
+}
+
+.note-item__username {
+  font-weight: lighter;
+}
+
+.note-item__delete {
+  padding: 8px;
+  font-size: 28px;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.note-input {
+  border: 2px solid black;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 8px;
+  margin-bottom: 32px;
+
+}
+
+.note-input input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.note-input button {
+  width: 100%;
+  padding: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+.search-bar {
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+  padding: 12px;
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0); 
+}
+
+.catatan-aktif {
+  margin: 2rem 0 2rem 0;
+  font-size: larger;
+}
+
+.register-page,
+.login-page {
+  border: 2px solid white;
+  margin: 2px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 #B1D0E0;
+  border-radius: 5px;
+}
+.register-page_input {
+  border: 2px solid white;
+  margin: 2px;
+  padding : 15px;
+}
+.login-page h2,
+.register-page h2 {
+  font-weight: normal;
+}
+
+.login-input,
+.register-input,
+.note-input {
+  margin-top: 16px;
+}
+
+.register-input_name {
+  outline: white;
+  background-color: white;
+}
+.login-input input,
+.register-input input,
+.note-input input {
+  display: block;
+  padding: 16px;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 24px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.login-input button,
+.register-input button,
+.note-input button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 24px;
+  background-color: #406882;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin: 16px 0;
+}
